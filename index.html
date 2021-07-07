@@ -41,9 +41,9 @@
         ●	Un método informar() que retorne la información del estado de la cuenta. <br>
         Utiliza este objeto para mostrar la descripción, ingresar y extraer dinero y volver a mostrar la descripción del estado de la cuenta.
         </p>
-        <button type="button" onclick="Ej2('report')" class="btn me-1 btn-secondary">Estado.</button>
-        <button type="button" onclick="Ej2('entry')" class="btn me-1 btn-secondary">Ingresar dinero.</button>
-        <button type="button" onclick="Ej2('extract')" class="btn me-1 btn-secondary">Extraer dinero.</button>
+        <button type="button" onclick="Ej2('report')" class="btn me-1 btn-secondary">Estado</button>
+        <button type="button" onclick="Ej2('entry')" class="btn me-1 btn-secondary">Ingresar dinero</button>
+        <button type="button" onclick="Ej2('extract')" class="btn me-1 btn-secondary">Extraer dinero</button>
     </div>
   </div>
   <div class="card border-success mb-3 mx-2 col-sm-12 col-md-5 col-lg-5">
@@ -51,10 +51,43 @@
     <div class="card-body">
       <h4 class="card-title">Rectángulos</h4>
       <p class="card-text">3-Escribe una clase que permita crear distintos objetos “rectángulos”, con las propiedades de alto y ancho, mas los métodos necesarios para modificar y mostrar sus propiedades, calcular el perímetro y el área.</p>
-      <button type="button" onclick="Ej3('modify')" class="btn me-1 btn-success">Modificar.</button>
-      <button type="button" onclick="Ej3('showStatus')" class="btn me-1 btn-success">Estado.</button>
-      <button type="button" onclick="Ej3('perimeter')" class="btn me-1 btn-success">Perimetro.</button>
-      <button type="button" onclick="Ej3('area')" class="btn btn-success">Area.</button>
+      <button type="button" onclick="Ej3('modify')" class="btn me-1 btn-success">Modifica.</button>
+      <button type="button" onclick="Ej3('showStatus')" class="btn me-1 btn-success">Estado</button>
+      <button type="button" onclick="Ej3('perimeter')" class="btn me-1 btn-success">Perimetro</button>
+      <button type="button" onclick="Ej3('area')" class="btn btn-success">Area</button>
+    </div>
+  </div>
+  <div class="card border-danger mb-3 mb-3 mx-2 col-sm-12 col-md-5 col-lg-5">
+    <div class="card-header">Ejercicio 4.</div>
+    <div class="card-body">
+      <h4 class="card-title">Producto</h4>
+      <p class="card-text">4- Escribe una clase Producto para crear objetos. Estos objetos, deben presentar las propiedades código, nombre y precio, además del método imprime datos, el cual escribe por pantalla los valores de sus propiedades. <br>
+        Posteriormente, cree tres instancias de este objeto y guárdalas en un array. <br>
+        Por último, utilice el método imprime datos para mostrar por pantalla los valores de los tres objetos instanciados.
+        </p>
+        <button type="button" class="btn btn-danger" onclick="Ej4()">Ver productos</button>
+    </div>
+  </div>
+  <div class="card border-info mb-3 mb-3 mx-2 col-sm-12 col-md-5 col-lg-5">
+    <div class="card-header">Ejercicio 5.</div>
+    <div class="card-body">
+      <h4 class="card-title">Generaciones</h4>
+      <p class="card-text">5- Crea una clase llamada Persona que siga las siguientes condiciones: <br>
+        Sus propiedades son: nombre, edad, DNI, sexo (H hombre, M mujer), peso y altura, año de nacimiento. Si quieres añadir alguna propiedad extra puedes hacerlo. <br>
+        Los métodos que se debe poder utilizar  son: <br>
+        ● mostrarGeneracion: este método debe mostrar un mensaje indicando a qué generación pertenece la persona creada y cual es el rasgo característico de esta generación. <br>
+        ● esMayorDeEdad: indica si es mayor de edad, devuelve un mensaje indicando que la persona es mayor de edad. <br>
+        ● mostrarDatos: devuelve toda la información del objeto. <br>
+        ● generaDNI(): genera un número aleatorio de 8 cifras.
+        </p>
+        <button type="button" class="btn btn-info me-1 " onclick="Ej5()">Ver Gen</button>
+        <button type="button" class="btn btn-info me-1 " onclick="Ej5()">+18?</button>
+        <button type="button" class="btn btn-info me-1 " onclick="Ej5()">Ver datos</button>
+        <button type="button" class="btn btn-info" onclick="Ej5()">Ver DNI</button>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
     </div>
   </div>
 </section>
