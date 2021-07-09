@@ -95,29 +95,29 @@ let arrProd = [prod1, prod2, prod3]
 console.log(arrProd)
 
 class Person{
-  constructor(name, age, document, sex, weight, height, dateOfBirth){
+  constructor(name, age, document, sex, weight, height, dateOfYear){
     this.nombre = name;
     this.edad = age;
     this.documento = document;
     this.sexo = sex;
     this.peso = weight;
     this.altura = height;
-    this.fechaNacimiento = dateOfBirth;
+    this.añoNacimiento = dateOfYear;
   }
   showGeneration (){
-    if (this.edad >= 1930 && this.age <= 1948) {
+    if (this.añoNacimiento >= 1930 && this.añoNacimiento <= 1948) {
       alert(`${this.nombre} pertenece a "Silent Generation" (niños de la post guerra).\n
       Su rasgo característico es la Austeridad. (Sencillez y moderación propias de la persona.).`)
-    } else if(this.edad >= 1949 && this.age <= 1968){
+    } else if(this.añoNacimiento >= 1949 && this.añoNacimiento <= 1968){
       alert(`${this.nombre} pertenece a "Baby Boom".\n
       Su rasgo característico es la Ambicion. (Deseo intenso y vehemente de conseguir una cosa difícil de lograr, especialmente riqueza, poder o fama.).`)
-    } else if (this.edad >= 1969 && this.age <= 1980) {
+    } else if (this.añoNacimiento >= 1969 && this.añoNacimiento <= 1980) {
       alert(`${this.nombre} pertenece a "Generación X".\n
       Su rasgo característico es la Obsesión por el éxito. (Una competencia por alcanzar el éxito, el éxito para algunos a menudo puede variar segun su realidad.).`)
-    } else if (this.edad >= 1981 && this.age <= 1993) {
+    } else if (this.añoNacimiento >= 1981 && this.añoNacimiento <= 1993) {
       alert(`${this.nombre} pertenece a "Generación Y".\n
       Su rasgo característico es la Frustración. (La frustración es una respuesta emocional común a la oposición, relacionada con la ira y la decepción, que surge de la percepción de resistencia al cumplimiento de la voluntad individual.).`)
-    } else if (this.edad >= 1994 && this.age <= 2010) {
+    } else if (this.añoNacimiento >= 1994 && this.añoNacimiento <= 2010) {
       alert(`${this.nombre} pertenece a "Generación Z".\n
       Su rasgo característico es la Irreverencia. (Persona que lucha, contiende o está en oposición con otra.).`)
     }
@@ -134,12 +134,12 @@ class Person{
   showData (){
     alert(`Propiedades del objeto.\n
     Nombre: ${this.nombre}.\n
-    Edad: ${this.edad}.\n
+    Edad: ${this.edad} años.\n
     DNI: ${this.documento}.\n
     Sexo: ${this.sexo}.\n
     Peso: ${this.peso} KG.\n
     altura: ${this.altura} CM.\n
-    Fecha de nacimiento: ${this.fechaNacimiento}.`) 
+    Año de nacimiento: ${this.añoNacimiento}.`) 
   }
   generateId (){
     this.documento = Math.round(Math.random() * 10000000);
@@ -147,7 +147,6 @@ class Person{
   } 
 }
 
-let people1 = new Person("Alejandro", 27, 38744138, "Hombre", 84, 174, "13/11/93")
 //**********************************************************************************************/
 let Ej1 = () => {
   let marca = "lamborghini"
@@ -177,18 +176,35 @@ let Ej1 = () => {
 
 let Ej2 = (metod) => {
   bank[metod]();
-  }
+}
 let Ej3 = (metod) => {
   rect1[metod]();
 }
 let Ej4 = () =>  {
-  alert("Para ver el objeto array de objetos presiona F12.")
+  alert("Para ver el array de objetos presiona F12.")
   arrProd[0].dataShow()
   arrProd[1].dataShow()
   arrProd[2].dataShow()
 }
+let people1;
 let Ej5 = () => {
-  people1.showData()
-  people1.adult()
+  let name = prompt("Ingresa nombre y apellido.")
+  let age = parseInt(prompt("Ingresa la edad."))
+  let document = prompt("Ingresa DNI.")
+  let sex =  prompt("Ingresa el sexo (Varon-Mujer).")
+  let weight = prompt("Ingresa el peso.")
+  let height = prompt("ingresa la altura.")
+  let dateOfYear = prompt("Ingresa el año de nacimiento.")
+  people1 = new Person(name, age, document, sex, weight, height, dateOfYear)
+
 }
-Ej5()
+function Ej5a(metod) {
+  people1[metod]()
+}
+
+function jaj(params) {
+  let date = "13/11/1993"
+  let date2 = date.slice(date.length - 4 ,)
+  console.log(date2)
+}
+jaj()
