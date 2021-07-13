@@ -147,6 +147,55 @@ class Person{
   } 
 }
 
+class Book{
+  constructor(isbn="",title="",author="",numberPage=0){
+    this.isbn = isbn;
+    this.title = title;
+    this.author = author;
+    this.numberPage = numberPage;
+  }
+  set updateIsbn (newIsbn){
+    this.isbn = newIsbn;
+  }
+  get obtainIsbn (){
+    return this.isbn;
+  }
+  set updateTitle (newTitle){
+    this.title = newTitle;
+  }
+  get obtainTitle (){
+    return this.title;
+  }
+  set updateAuthor (newAuthor){
+    this.author = newAuthor;
+  }
+  get obtainAuthor (){
+    return this.author;
+  }
+  set updateNumberPage(newPages){
+    this.numberPage = newPages;
+  }
+  get obtainNumberPage(){
+    return this.numberPage;
+  }
+  showBook (){
+    alert(`El libro ${this.title} con ISBN ${this.isbn} creado por el autor ${this.author} tiene páginas ${this.numberPage}.`)
+  }
+}
+
+let newBook = new Book()
+console.log(newBook)
+newBook.updateIsbn = "00064587"
+newBook.updateTitle = "Fisica Tomo 1"
+newBook.updateAuthor = "Ale Busi"
+newBook.updateNumberPage = 212
+console.log(newBook)
+console.log(newBook.obtainIsbn)
+console.log(newBook.obtainTitle)
+console.log(newBook.obtainAuthor)
+console.log(newBook.obtainNumberPage)
+newBook.showBook()
+
 //**********************************************************************************************/
 let Ej1 = () => {
   let marca = "lamborghini"
@@ -196,15 +245,10 @@ let Ej5 = () => {
   let height = prompt("ingresa la altura.")
   let dateOfYear = prompt("Ingresa el año de nacimiento.")
   people1 = new Person(name, age, document, sex, weight, height, dateOfYear)
-
 }
 function Ej5a(metod) {
   people1[metod]()
 }
+let Ej6 = () => {
 
-function jaj(params) {
-  let date = "13/11/1993"
-  let date2 = date.slice(date.length - 4 ,)
-  console.log(date2)
 }
-jaj()
