@@ -179,22 +179,47 @@ class Book{
     return this.numberPage;
   }
   showBook (){
-    alert(`El libro ${this.title} con ISBN ${this.isbn} creado por el autor ${this.author} tiene páginas ${this.numberPage}.`)
+    alert(`El libro ${this.title} con ISBN ${this.isbn} creado por el autor ${this.author} tiene ${this.numberPage} páginas .`)
   }
 }
-
-let newBook = new Book()
-console.log(newBook)
-newBook.updateIsbn = "00064587"
-newBook.updateTitle = "Fisica Tomo 1"
-newBook.updateAuthor = "Ale Busi"
-newBook.updateNumberPage = 212
-console.log(newBook)
-console.log(newBook.obtainIsbn)
-console.log(newBook.obtainTitle)
-console.log(newBook.obtainAuthor)
-console.log(newBook.obtainNumberPage)
-newBook.showBook()
+class Contacts{
+  constructor(name, number, schedule ){
+    this.contacto = name;
+    this.numero = number;
+    this.agenda = schedule;
+  }
+  addContact (){
+    if (schedule.length <= 1) {
+      let contact = {
+        contacto :  prompt("ingresa el nombre y apellido."),
+        numero : prompt("ingresa el numero."),
+        
+      }
+      this.agenda.push(contact)
+    }else {
+      alert("La agenda está llena. para añadir nuevos contactos, elimine contactos.")
+    }
+  }
+  coincidenceContact (){
+    let compare = prompt("Ingresa el nombre o el numero").toLowerCase()
+    if (compare !== null) {
+      for (let i = 0; i < schedule.length; i++) {
+        if (schedule[i].contacto.toLowerCase() == compare || schedule[i].numero == compare) {
+          alert("El contacto SI existe.")
+          break
+        } else {
+          alert("El contacto NO existe.")
+          break
+        }
+      }  
+    } else {
+      alert("No ingresaste nada.")
+    }
+  }
+  listContact (){
+    
+  }
+}
 
 //**********************************************************************************************/
 let Ej1 = () => {
@@ -249,6 +274,28 @@ let Ej5 = () => {
 function Ej5a(metod) {
   people1[metod]()
 }
+let bookOne ;
+let bookArr = [];
 let Ej6 = () => {
-
+bookOne = new Book()
+bookOne.updateTitle = document.getElementById("title").value;
+bookOne.updateIsbn = document.getElementById("isbn").value;
+bookOne.updateAuthor = document.getElementById("author").value;
+bookOne.updateNumberPage = document.getElementById("number").value;
+}
+let Ej6a = () => {
+  bookArr.push(bookOne)
+  bookOne.showBook();
+  console.log(bookArr)
+}
+let contact;
+let schedule = [];
+let Ej7 = () => {
+contact = new Contacts("", 0, schedule)
+contact.addContact()
+console.log(schedule)
+}
+let Ej7a = (metod) => {
+  contact[metod]()
+  
 }
