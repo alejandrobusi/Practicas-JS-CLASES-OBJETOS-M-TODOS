@@ -189,7 +189,7 @@ class Contacts{
     this.agenda = schedule;
   }
   addContact (){
-    if (schedule.length <= 1) {
+    if (schedule.length <= 9) {
       let contact = {
         contacto :  prompt("ingresa el nombre y apellido."),
         numero : prompt("ingresa el numero."),
@@ -206,10 +206,6 @@ class Contacts{
       for (let i = 0; i < schedule.length; i++) {
         if (schedule[i].contacto.toLowerCase() == compare || schedule[i].numero == compare) {
           alert("El contacto SI existe.")
-          break
-        } else {
-          alert("El contacto NO existe.")
-          break
         }
       }  
     } else {
@@ -218,6 +214,41 @@ class Contacts{
   }
   listContact (){
     
+  }
+  searchContact (){
+    let search = prompt("ingresa el nombre del contacto").toLocaleLowerCase();
+    for (let i = 0; i < schedule.length; i++) {
+      if (schedule[i].contacto.toLowerCase() == search || schedule[i].numero == search) {
+        alert(`Busqueda exitosa.\n
+          Nombre: ${schedule[i].contacto}.\n
+          Numero: ${schedule[i].numero}.`)
+        
+      } 
+    }  
+    alert("El contacto no fue encontrado o no existe.")
+  }
+  deleteContact (){
+    let deleteContact = prompt("ingresa el nombre del contacto").toLocaleLowerCase();
+    for (let i = 0; i < schedule.length; i++) {
+      if (schedule[i].contacto.toLowerCase() == deleteContact || schedule[i].numero == deleteContact) {
+        alert(`El siguiente contacto se va a eliminar.\n
+          Nombre: ${schedule[i].contacto}.\n
+          Numero: ${schedule[i].numero}.`)
+          schedule.splice([i],1)
+          console.log(schedule)
+      }
+    }  
+  }
+  fullContact () {
+    if (schedule.length = 10) {
+      alert("No tienes espacios disponibles.")
+    } else {
+      alert("Tienes espacios disponibles")
+    }
+  }
+  remainingContact (){
+  let rem = 10 - schedule.length; 
+  alert(`Tienes ${rem} espacios vacios.`)
   }
 }
 
