@@ -113,24 +113,30 @@
       <button type="button" class="btn btn-warning mt-2 me-1 " onclick="Ej6a()">Ver libro</button>
     </div>
   </div>
-  <div class="card border-warning mb-3 mb-3 mx-2 col-sm-12 col-md-5 col-lg-5">
+  <div class="card border-dark mb-3 mb-3 mx-2 col-sm-12 col-md-5 col-lg-5">
     <div class="card-header">Ejercicio 7.</div>
     <div class="card-body">
       <h4 class="card-title">Agenda telefónica</h4>
-      <p class="card-text">
+      <p class="card-text">Los métodos de la agenda serán los siguientes: <br>
+        ●	aniadirContacto(Contacto): Añade un contacto a la agenda, sino la agenda no puede almacenar mas contactos indicar por pantalla. <br>
+        ●	existeContacto(Conctacto): indica si el contacto pasado existe o no.<br>
+        ●	listarContactos(): Lista toda la agenda.<br>
+        ●	buscarContacto(nombre): busca un contacto por su nombre y muestra su teléfono.<br>
+        ●	eliminarContacto(Contacto c): elimina el contacto de la agenda, indica si se ha eliminado o no por pantalla.<br>
+        ●	agendaLlena(): indica si la agenda está llena.<br>
+        ●	huecosLibres(): indica cuántos contactos más podemos ingresar.<br>
+        Crea un menú con opciones por consola para probar todas estas funcionalidades.
       </p>
       <div class="form-group">
       </div>
-      <button type="button" class="btn btn-outline-warning mt-2 me-1 " onclick="Ej7()">¡Crear Objeto!</button>
-      <button type="button" class="btn btn-warning mt-2 me-1 " onclick="Ej7a('coincidenceContact')">comparar </button>
-      <button type="button" class="btn btn-warning mt-2 me-1 " onclick="Ej7a('listContact')">list </button>
-      <button type="button" class="btn btn-warning mt-2 me-1 " onclick="Ej7a('searchContact')">search </button>
-      <button type="button" class="btn btn-warning mt-2 me-1 " onclick="Ej7a('deleteContact')">delete </button>
-      <button type="button" class="btn btn-warning mt-2 me-1 " onclick="Ej7a('remainingContact')">rem </button>
-
-
-      <ul class="listUl">
-
+      <button type="button" class="btn btn-outline-dark mt-2 me-1 " onclick="Ej7()">¡Crear Objeto!</button>
+      <button type="button" class="btn btn-dark mt-2 me-1 " onclick="Ej7a('coincidenceContact')">Comparar </button>
+      <button type="button" class="btn btn-dark mt-2 me-1 " onclick="Ej7b('listContact',ul)">Mostrar lista </button>
+      <button type="button" class="btn btn-dark mt-2 me-1 " onclick="Ej7a('searchContact')">Buscar </button>
+      <button type="button" class="btn btn-dark mt-2 me-1 " onclick="Ej7a('deleteContact')">Eliminar </button>
+      <button type="button" class="btn btn-dark mt-2 me-1 " onclick="Ej7a('remainingContact')">Espacio libre </button>
+      <p class="my-2">Lista de contactos:</p>
+      <ul  id="ul">
       </ul>
     </div>
   </div>
@@ -143,13 +149,12 @@
         <p class="col-6">Este documento presenta ejercicios de ROLLINGCODE resueltos. Usando HTML, CSS y JS.
           Enfocado en JS, haciendo uso de Variables, Condicionales, Ciclos, Funciones, Arrays, Objetos, Clases y un poco de DOM.
         </p>
-        <a href="mailto:alejandro_busi@hotmail.com" class="text-decoration-none"><Strong>Contacto</Strong></a>
+        <a href="mailto:alejandrobusi@gmail.com" class="text-decoration-none"><Strong>Contacto</Strong></a>
       </div>
     </div>
   </section>
 </footer>
   <script src="./Js/app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
 </body>
 </html>

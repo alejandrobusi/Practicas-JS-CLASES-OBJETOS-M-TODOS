@@ -213,19 +213,21 @@ class Contacts{
     }
   }
   listContact (){
-    
+    return this.agenda;
   }
   searchContact (){
     let search = prompt("ingresa el nombre del contacto").toLocaleLowerCase();
+    let onOff = true;
     for (let i = 0; i < schedule.length; i++) {
       if (schedule[i].contacto.toLowerCase() == search || schedule[i].numero == search) {
         alert(`Busqueda exitosa.\n
           Nombre: ${schedule[i].contacto}.\n
           Numero: ${schedule[i].numero}.`)
-        
+          onOff = false;
       } 
-    }  
-    alert("El contacto no fue encontrado o no existe.")
+    }  if (onOff) {
+      alert("El contacto no fue encontrado o no existe.")
+    }
   }
   deleteContact (){
     let deleteContact = prompt("ingresa el nombre del contacto").toLocaleLowerCase();
@@ -324,9 +326,20 @@ let schedule = [];
 let Ej7 = () => {
 contact = new Contacts("", 0, schedule)
 contact.addContact()
-console.log(schedule)
+// console.log(schedule)
 }
 let Ej7a = (metod) => {
   contact[metod]()
   
+}
+let Ej7b = (metod, ul) => {
+let contactos = contact.listContact();
+while (ul.firstChild) {
+  ul.removeChild(ul.firstChild);
+}
+contactos.forEach(contacto => {
+  li = document.createElement(`li`)
+  li.innerText = `Nombre: ${contacto.contacto}. Numero: ${contacto.numero}.`
+  ul.appendChild(li)
+});
 }
