@@ -330,7 +330,6 @@ contact.addContact()
 }
 let Ej7a = (metod) => {
   contact[metod]()
-  
 }
 let Ej7b = (metod, ul) => {
 let contactos = contact.listContact();
@@ -339,7 +338,7 @@ while (ul.firstChild) {
 }
 contactos.forEach(contacto => {
   li = document.createElement(`li`)
-  li.innerText = `Nombre: ${contacto.contacto}. Numero: ${contacto.numero}.`
+  li.innerText = `Nombre: ${contacto.contacto}. umero: ${contacto.numero}.`
   ul.appendChild(li)
 });
 }
